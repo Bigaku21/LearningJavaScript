@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Train</title>
+    <script defer src = "script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="error"></div>
+    <form id = "form" action="/" method = "GET">
+        <div>
+            <h1>Moving agents to a new pool</h1>
+            <label for = "ComputerName" type="text">Agent computername</label>
+            <input id= "ComputerName" name = "ComputerName" type="text">
+        </div>
+        <div>
+            <label for = "PAT" type="text">Personal Access Token</label>
+            <input id="PAT" name = "PAT" type="text">   
+        </div>
+        <div>
+          <label for = "AgentPool" type="text">Agent pool</label>
+          <input id="AgentPool" name = "AgentPool" type="text">   
+        </div>
+        <div>
+            <button type = "submit">Submit</button>
+        </div>
+    </form>   
+  </body>
+</html>
