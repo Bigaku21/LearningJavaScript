@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+	<p>Enter the percentage, amount of years and monthly investment to calculate.</p>
+</div>
+<div>
+	Percentage:         <input type="text" id="percentage"        value="8">
+</div>                                                            
+<div>                                                             
+	Years:              <input type="text" id="years"             value="30">
+</div>
+<div>
+	Monthly investment: <input type="text" id="monthlyPay"        value="15000">
+</div>
+
+<button onclick="myFunction()">Try it</button>
+<div>
+	Result:<p id="demo"></p> 
+</div>
+<script>
+const prt = function(smth){
+	console.log(smth);
+}
+let root = function(n, root){
+  return  Math.pow(n, 1/root);
+}
+let calc = function(years, perc, monthlyPay){
+  let current = 0;
+  let percent = (perc/100)+1;
+  let monthlyPercent = Math.pow(percent, 1/12)
+  let monthlyVal = parseInt(monthlyPay);
+  for(let i = 0; i<years; i++)
+  {
+    for(let j = 0; j<12; j++)
+	{
+    	current = current + monthlyVal;
+      	current *= monthlyPercent;
+
+    }
+  }
+  return current;	
+}
+
+
+function myFunction() {
+  let y  = document.getElementById("years").value;
+  let p  = document.getElementById("percentage").value;
+  let mp = document.getElementById("monthlyPay").value;
+  let outputString = ("Result: "+Math.round(calc(y,p,mp))+" kr." );
+  document.getElementById("demo").innerHTML = c = outputString;
+}
+</script>
+
+</body>
+</html>
